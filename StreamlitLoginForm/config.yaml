@@ -1,0 +1,21 @@
+credentials:
+  usernames:
+    admin:
+      email: admin@app.com
+      failed_login_attempts: 0 # Will be managed automatically
+      logged_in: False # Will be managed automatically
+      name: Administrator
+      password: $2b$12$oVpa8MBEQJzxa66Dt3NX/.GW/4E3Mo6WB27XzQF6CAuk/BAEMcaL2 # Will be hashed automatically
+    user:
+      email: user@app.com
+      failed_login_attempts: 0 # Will be managed automatically
+      logged_in: False # Will be managed automatically
+      name: User
+      password: $2b$12$HQCHjrxAuABUEb1AmJPXIe5GIpABLyslG/GJcFEXR2MOVHPXXm1Qi # Will be hashed automatically
+cookie:
+  expiry_days: 0
+  key: some_signature_key # Must be string
+  name: some_cookie_name
+pre-authorized:
+  emails:
+  - melsby@gmail.com
