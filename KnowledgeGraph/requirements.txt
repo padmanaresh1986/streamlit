@@ -2,3 +2,4 @@ streamlit
 streamlit-agraph
 pandas
 streamlit-pandas-profiling
+ollama
