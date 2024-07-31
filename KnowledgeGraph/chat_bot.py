@@ -12,7 +12,9 @@ if "model" not in st.session_state:
 
 models = [model["name"] for model in ollama.list()["models"]]
 selectedModel = st.sidebar.selectbox("Choose your model", models)
-st.session_state["model"] = selectedModel
+if selectedModel:
+    st.session_state["model"] = selectedModel
+    st.session_state["messages"] = []
 
 
 def model_response_generator():
@@ -41,4 +43,4 @@ if prompt:
 
     with st.chat_message("assistant"):
         message = st.write_stream(model_response_generator())
-        st.session_state["messages"].append({"role": "assistant", "content": prompt})
+        st.session_state["messages"].append({"role": "assistant", "content": message})
